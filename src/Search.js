@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import * as BooksAPI from './BooksAPI'
 import Book from './Book.js'
+import { Link } from 'react-router-dom'
 
 //TODO add prop types
 class Search extends Component {
@@ -74,7 +75,7 @@ class Search extends Component {
         return (
             <div className="search-books">
             <div className="search-books-bar">
-                <a className="close-search" onClick={() => this.setState({ showSearchPage: false })}>Close</a>
+                <Link className="close-search" to="/">Close</Link>
                 <SearchBar handleSearch={this.debouncedHandleSearch}/>
             </div>
             <div className="search-books-results">
