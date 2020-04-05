@@ -1,45 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 
+//TODO add prop types
 const Book = ( props ) => {
-
-    //TODO replace with props -- START
-    const shelves = [
-        {
-            name: "Currently Reading",
-            value: "currentlyReading",
-            selected: false
-        },
-        {
-            name: "Want to Read",
-            value: "wantToRead",
-            selected: false
-        },
-        {
-            name: "Read",
-            value: "read",
-            selected: false
-        },
-        {
-            name: "None",
-            value: "none",
-            selected: true
-        },
-    ];
-
-    const book = {
-        title: "To Kill a Mockingbird",
-        publishedDate: "1321",
-        authors:["Harper Lee", "Danny"],
-        imageLinks:{thumbnail: "http://books.google.com/books/content?id=PGR2AwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73-GnPVEyb7MOCxDzOYF1PTQRuf6nCss9LMNOSWBpxBrz8Pm2_mFtWMMg_Y1dx92HT7cUoQBeSWjs3oEztBVhUeDFQX6-tWlWz1-feexS0mlJPjotcwFqAg6hBYDXuK_bkyHD-y&source=gbs_api"}
-    }
-
-    function addToShelf (value) {
-        console.log(value);
-    }
     
-    const { imageLinks, title, authors } = book;
+    const { imageLinks, title, authors, shelves, addToShelf } = props;
     const { thumbnail } = imageLinks;
-    //TODO replace with props -- END
 
     function getCommaSeparatedAuthors (authors) {
         return authors ? authors.join(", ") : authors;
